@@ -43,10 +43,14 @@ namespace CsCourse.ClassesAndObjects.WPF
             try
             {
                 int snelheidMax = int.Parse(txtMaxSnelheid.Text);
-                Car nieuweWagen;            // Car Variabele declareren
-                nieuweWagen = new Car();    // Car variabele initialiseren
-                nieuweWagen.carBrand = (Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString());
-                nieuweWagen.maxSpeed = snelheidMax;
+                //Car nieuweWagen;            // Car Variabele declareren
+                //nieuweWagen = new Car();    // Car variabele initialiseren
+                //nieuweWagen.carBrand = (Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString());
+                //nieuweWagen.maxSpeed = snelheidMax;
+
+
+                Car nieuweWagen = new Car((Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString()), snelheidMax);
+
                 lstAutos.Items.Add(nieuweWagen);
             }
             catch(Exception ex)

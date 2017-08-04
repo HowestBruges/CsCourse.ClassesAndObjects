@@ -20,7 +20,13 @@ namespace CsCourse.ClassesAndObjectsLib
         {
 
         }
-        
+
+        public Car(Brand carBrand, int maxSpeed)
+        {
+            this.carBrand = carBrand;
+            this.maxSpeed = maxSpeed;
+        }
+
         // Visualisatie van  AutoObject 
         public override string ToString()
         {
