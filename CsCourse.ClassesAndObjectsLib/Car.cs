@@ -14,17 +14,20 @@ namespace CsCourse.ClassesAndObjectsLib
         public int maxSpeed;
         public int actSpeed;
         public Brand carBrand;
+        // Static Field
+        public static int nrObjects = 0;
 
         // Constructor
         public Car()
         {
-
+            nrObjects++;
         }
 
         public Car(Brand carBrand, int maxSpeed)
         {
             this.carBrand = carBrand;
             this.maxSpeed = maxSpeed;
+            nrObjects++;
         }
 
         // Visualisatie van  AutoObject 
@@ -49,6 +52,12 @@ namespace CsCourse.ClassesAndObjectsLib
             {
                 actSpeed = 0;
             }
+        }
+
+        // Static Method
+        public static int CompareSpeed(Car Car1, Car Car2)
+        {
+            return Car1.maxSpeed - Car2.maxSpeed;
         }
 
     }

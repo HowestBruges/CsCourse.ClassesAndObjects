@@ -40,8 +40,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="17,281,0,0" TextWrapping="Wrap" Text="Wagen 2 :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="17,308,0,0" TextWrapping="Wrap" Text="Verschil :" VerticalAlignment="Top"/>
         <TextBlock x:Name="tbDeltaSnelheid" HorizontalAlignment="Left" Margin="101,311,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbWagen1" HorizontalAlignment="Left" Margin="101,254,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cmbWagen2" HorizontalAlignment="Left" Margin="101,281,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmbWagen1" HorizontalAlignment="Left" Margin="101,254,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbWagen1_SelectionChanged"/>
+        <ComboBox x:Name="cmbWagen2" HorizontalAlignment="Left" Margin="101,281,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbWagen2_SelectionChanged"/>
 
     </Grid>
 </Window>

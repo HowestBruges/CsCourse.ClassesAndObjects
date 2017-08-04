@@ -52,6 +52,13 @@ namespace CsCourse.ClassesAndObjects.WPF
                 Car nieuweWagen = new Car((Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString()), snelheidMax);
 
                 lstAutos.Items.Add(nieuweWagen);
+                cmbWagen1.Items.Add(nieuweWagen);
+                cmbWagen2.Items.Add(nieuweWagen);
+
+                cmbWagen1.SelectedIndex = 0;
+                cmbWagen2.SelectedIndex = 0;
+
+                tbAantalObjecten.Text = Car.nrObjects.ToString();
             }
             catch(Exception ex)
             {
@@ -89,5 +96,25 @@ namespace CsCourse.ClassesAndObjects.WPF
                 tbActSnelheid.Text = geselecteerdeWagen.actSpeed.ToString();
             }
         }
+
+        private void cmbWagen1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            VergelijkSnelheid();
+        }
+
+        private void cmbWagen2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            VergelijkSnelheid();
+        }
+
+        private void VergelijkSnelheid()
+        {
+            if ((cmbWagen1.SelectedItem != null) && (cmbWagen2.SelectedItem != null))
+            {
+               tbDeltaSnelheid.Text = Car.CompareSpeed((Car)cmbWagen1.SelectedItem, (Car)cmbWagen2.SelectedItem).ToString();
+            }
+
+        }
+
     }
 }
