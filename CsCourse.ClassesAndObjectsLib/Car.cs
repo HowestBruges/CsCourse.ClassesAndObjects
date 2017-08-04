@@ -16,18 +16,21 @@ namespace CsCourse.ClassesAndObjectsLib
         public Brand carBrand;
         // Static Field
         public static int nrObjects = 0;
+        public static Random rd = new Random();
 
         // Constructor
         public Car()
         {
+            carBrand = (Brand)rd.Next(0, Enum.GetNames(typeof(Brand)).Length);
+            maxSpeed = rd.Next(180, 301);
             nrObjects++;
         }
 
-        public Car(Brand carBrand, int maxSpeed)
+        public Car(Brand carBrand, int maxSpeed):this()
         {
             this.carBrand = carBrand;
             this.maxSpeed = maxSpeed;
-            nrObjects++;
+           
         }
 
         // Visualisatie van  AutoObject 

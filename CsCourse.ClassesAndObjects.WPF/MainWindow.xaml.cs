@@ -34,8 +34,21 @@ namespace CsCourse.ClassesAndObjects.WPF
                 cmbMerk.Items.Add(s);
             }
 
+            // Opvullen Data
+            for (int i=0; i<5; i++)
+            {
+                Car opstartWagen = new Car();
+                lstAutos.Items.Add(opstartWagen);
+                cmbWagen1.Items.Add(opstartWagen);
+                cmbWagen2.Items.Add(opstartWagen);
+            }
+
             // Netjes : Eerste item secteren 
             cmbMerk.SelectedIndex = 0;
+            cmbWagen1.SelectedIndex = 0;
+            cmbWagen2.SelectedIndex = 0;
+
+            tbAantalObjecten.Text = Car.nrObjects.ToString();
         }
 
         private void btnVoegToe_Click(object sender, RoutedEventArgs e)
@@ -47,17 +60,13 @@ namespace CsCourse.ClassesAndObjects.WPF
                 //nieuweWagen = new Car();    // Car variabele initialiseren
                 //nieuweWagen.carBrand = (Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString());
                 //nieuweWagen.maxSpeed = snelheidMax;
-
-
+                
                 Car nieuweWagen = new Car((Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString()), snelheidMax);
 
                 lstAutos.Items.Add(nieuweWagen);
                 cmbWagen1.Items.Add(nieuweWagen);
                 cmbWagen2.Items.Add(nieuweWagen);
-
-                cmbWagen1.SelectedIndex = 0;
-                cmbWagen2.SelectedIndex = 0;
-
+                
                 tbAantalObjecten.Text = Car.nrObjects.ToString();
             }
             catch(Exception ex)
