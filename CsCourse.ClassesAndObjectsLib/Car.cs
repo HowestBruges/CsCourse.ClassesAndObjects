@@ -8,7 +8,7 @@ namespace CsCourse.ClassesAndObjectsLib
 {
     public enum Brand { BMW, Volkswagen, Ford, Mercedes}
 
-    public class Car
+    public partial class Car
     {
         // Fields
         public int maxSpeed;
@@ -36,29 +36,7 @@ namespace CsCourse.ClassesAndObjectsLib
             return carBrand + "(" + maxSpeed +")";
         }
 
-        public void IncreaseSpeed(int amount)
-        {
-            actSpeed += amount;
-            if (actSpeed > maxSpeed)
-            {
-                actSpeed = maxSpeed;
-            }
-        }
-
-        public void DecreaseSpeed(int amount)
-        {
-            actSpeed -= amount;
-            if (actSpeed < 0)
-            {
-                actSpeed = 0;
-            }
-        }
-
-        // Static Method
-        public static int CompareSpeed(Car Car1, Car Car2)
-        {
-            return Car1.maxSpeed - Car2.maxSpeed;
-        }
+       
 
     }
 }
