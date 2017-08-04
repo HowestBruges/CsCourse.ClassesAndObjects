@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CsCourse.ClassesAndObjectsLib\CsCourse.ClassesAndObjectsLib.csproj">
+      <Project>{d491d842-ba42-425e-9830-86431084ca9f}</Project>
+      <Name>CsCourse.ClassesAndObjectsLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
