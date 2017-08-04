@@ -18,7 +18,7 @@
         </GroupBox>
         <GroupBox Header="Beschikbare Autos" HorizontalAlignment="Left" Height="184" Margin="290,10,0,0" VerticalAlignment="Top" Width="272">
             <Grid >
-                <ListBox x:Name="lstAutos" HorizontalAlignment="Left" Height="144" Margin="37,10,0,0" VerticalAlignment="Top" Width="183" />
+                <ListBox x:Name="lstAutos" HorizontalAlignment="Left" Height="144" Margin="37,10,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="lstAutos_SelectionChanged" />
             </Grid>
         </GroupBox>
         <GroupBox Header="Selectie" HorizontalAlignment="Left" Height="133" Margin="290,199,0,0" VerticalAlignment="Top" Width="272">
@@ -29,8 +29,8 @@
                 <TextBlock x:Name="tbMaxSnelheid" HorizontalAlignment="Left" Margin="120,31,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="Act. Snelheid :" VerticalAlignment="Top"/>
                 <TextBlock x:Name="tbActSnelheid" HorizontalAlignment="Left" Margin="120,55,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top"/>
-                <Button x:Name="btnVersnel" Content="Versnel" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="75" />
-                <Button x:Name="btnVertraag" Content="Vertraag" HorizontalAlignment="Left" Margin="110,86,0,0" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="btnVersnel" Content="Versnel" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="75" Click="btnVersnel_Click" />
+                <Button x:Name="btnVertraag" Content="Vertraag" HorizontalAlignment="Left" Margin="110,86,0,0" VerticalAlignment="Top" Width="75" Click="btnVertraag_Click"/>
             </Grid>
         </GroupBox>
         <TextBlock HorizontalAlignment="Left" Margin="17,211,0,0" TextWrapping="Wrap" Text="AantalObjecten :" VerticalAlignment="Top"/>

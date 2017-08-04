@@ -33,6 +33,23 @@ namespace CsCourse.ClassesAndObjectsLib
             return carBrand + "(" + maxSpeed +")";
         }
 
+        public void IncreaseSpeed(int amount)
+        {
+            actSpeed += amount;
+            if (actSpeed > maxSpeed)
+            {
+                actSpeed = maxSpeed;
+            }
+        }
+
+        public void DecreaseSpeed(int amount)
+        {
+            actSpeed -= amount;
+            if (actSpeed < 0)
+            {
+                actSpeed = 0;
+            }
+        }
 
     }
 }

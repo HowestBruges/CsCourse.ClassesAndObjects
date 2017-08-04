@@ -58,5 +58,36 @@ namespace CsCourse.ClassesAndObjects.WPF
                 MessageBox.Show("Kan niet invoegen, foutieve ingave \nReden :\t" + ex.Message, "Foutmelding");
             }
         }
+
+        private void lstAutos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstAutos.SelectedItem != null)
+            {
+                Car geselecteerdeWagen = (Car)lstAutos.SelectedItem;
+                tbMerk.Text = geselecteerdeWagen.carBrand.ToString();
+                tbMaxSnelheid.Text = geselecteerdeWagen.maxSpeed.ToString();
+                tbActSnelheid.Text = geselecteerdeWagen.actSpeed.ToString();
+            }
+        }
+
+        private void btnVersnel_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstAutos.SelectedItem != null)
+            {
+                Car geselecteerdeWagen = (Car)lstAutos.SelectedItem;
+                geselecteerdeWagen.IncreaseSpeed(5);
+                tbActSnelheid.Text = geselecteerdeWagen.actSpeed.ToString();
+            }
+        }
+
+        private void btnVertraag_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstAutos.SelectedItem != null)
+            {
+                Car geselecteerdeWagen = (Car)lstAutos.SelectedItem;
+                geselecteerdeWagen.DecreaseSpeed(5);
+                tbActSnelheid.Text = geselecteerdeWagen.actSpeed.ToString();
+            }
+        }
     }
 }
