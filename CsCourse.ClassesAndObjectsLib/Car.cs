@@ -20,14 +20,12 @@ namespace CsCourse.ClassesAndObjectsLib
         {
 
         }
-
-        // Constructor Overload
-        public Car(Brand carBrand, int maxSpeed)
+        
+        // Visualisatie van  AutoObject 
+        public override string ToString()
         {
-            this.carBrand = carBrand;
-            this.maxSpeed = maxSpeed;
+            return carBrand + "(" + maxSpeed +")";
         }
-
 
 
     }

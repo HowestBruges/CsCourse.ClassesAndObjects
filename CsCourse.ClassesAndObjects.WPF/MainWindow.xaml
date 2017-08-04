@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CsCourse.ClassesAndObjects.WPF"
         mc:Ignorable="d"
-        Title="Classes And Objects" Height="380" Width="580">
+        Title="Classes And Objects" Height="380" Width="580" Loaded="Window_Loaded">
     <Grid>
         <GroupBox Header="Voeg Wagens Toe" HorizontalAlignment="Left" Height="184" Margin="10,10,0,0" VerticalAlignment="Top" Width="272">
             <Grid >
@@ -13,7 +13,7 @@
                 <ComboBox x:Name="cmbMerk" HorizontalAlignment="Left" Height="22" Margin="108,28,0,0" VerticalAlignment="Top" Width="120"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="Max.Snelheid :" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtMaxSnelheid" HorizontalAlignment="Left" Height="23" Margin="108,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="btnVoegToe" Content="Voeg Wagen Toe" HorizontalAlignment="Left" Margin="80,114,0,0" Height="20" VerticalAlignment="Top"/>
+                <Button x:Name="btnVoegToe" Content="Voeg Wagen Toe" HorizontalAlignment="Left" Margin="80,114,0,0" Height="20" VerticalAlignment="Top" Click="btnVoegToe_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Beschikbare Autos" HorizontalAlignment="Left" Height="184" Margin="290,10,0,0" VerticalAlignment="Top" Width="272">

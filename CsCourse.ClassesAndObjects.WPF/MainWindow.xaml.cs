@@ -25,5 +25,34 @@ namespace CsCourse.ClassesAndObjects.WPF
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Opvullen ComboBox
+            foreach (string s in Enum.GetNames(typeof(Brand)))
+            {
+                cmbMerk.Items.Add(s);
+            }
+
+            // Netjes : Eerste item secteren 
+            cmbMerk.SelectedIndex = 0;
+        }
+
+        private void btnVoegToe_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int snelheidMax = int.Parse(txtMaxSnelheid.Text);
+                Car nieuweWagen;            // Car Variabele declareren
+                nieuweWagen = new Car();    // Car variabele initialiseren
+                nieuweWagen.carBrand = (Brand)Enum.Parse(typeof(Brand), cmbMerk.SelectedItem.ToString());
+                nieuweWagen.maxSpeed = snelheidMax;
+                lstAutos.Items.Add(nieuweWagen);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Kan niet invoegen, foutieve ingave \nReden :\t" + ex.Message, "Foutmelding");
+            }
+        }
     }
 }
